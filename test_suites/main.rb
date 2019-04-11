@@ -15,7 +15,7 @@ INCORRECT_LOGIN = 'blabla@mail.net'
 INCORRECT_PASSWORD = '123456'
 
 
-def preparing_files
+def prepare_files
   File.delete(OUTPUT_FILE) if File.exists?(OUTPUT_FILE)
 end
 
@@ -39,9 +39,11 @@ end
 
 BROWSER_LIST = [:chrome]
 
+prepare_files
+
 BROWSER_LIST.each do |browser|
-  tc_01(browser)
-#   tc_02(browser)
+  # tc_01(browser)
+  tc_02(browser)
 #   tc_03(browser)
 #   tc_04(browser)
 #   tc_05(browser)
