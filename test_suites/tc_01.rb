@@ -1,4 +1,5 @@
-def tc_01(browser)
+def tc_01(browser) # User can open login page via menu
+
   prepare_browser(browser)
 
   @driver.find_element(xpath: "//a[contains(text(),'Login')]").click

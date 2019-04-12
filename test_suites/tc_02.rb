@@ -1,4 +1,5 @@
-def tc_02(browser)
+def tc_02(browser) # User can login with correct credentials
+
   prepare_browser(browser)
 
   @driver.find_element(xpath: "//a[contains(text(),'Login')]").click
