@@ -10,6 +10,14 @@ To obtain the application:
 
 or just download it from GitHub
 
+To store credentials create file .env in the test_suites directory:
+=============beginning of file==============
+`LOGIN="user@mail.net"`
+
+`PASSWORD="userpassword"`
+
+================end of file================= 
+
 To run it step into the 'watir_test' directory issue the command:
 
 `$ ruby test_suites/main.rb`

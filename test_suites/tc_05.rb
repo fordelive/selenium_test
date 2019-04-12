@@ -1,13 +1,13 @@
-def tc_04(browser)
-  # -----------------------------------tc_04.1----------------------------------
-  # User can not login with blank password
+def tc_05(browser)
+  # -----------------------------------tc_05.1----------------------------------
+  # User can not login with incorrect email.
 
   prepare_browser(browser)
 
   @driver.find_element(:xpath => "//a[contains(text(),'Login')]").click
-  
-  @driver.find_element(id: 'user_email').send_keys(USER_LOGIN)
-  @driver.find_element(id: 'user_password').send_keys('')
+
+  @driver.find_element(id: 'user_email').send_keys(INCORRECT_LOGIN)
+  @driver.find_element(id: 'user_password').send_keys(USER_PASSWORD)
 
   sleep(CLICK_TIMEOUT)
 
@@ -23,15 +23,15 @@ def tc_04(browser)
 
   @driver.close
 
-  # -----------------------------------tc_04.2----------------------------------
-  # User can not login with blank email
+  # -----------------------------------tc_05.2----------------------------------
+  # User cannot ligin with incorrect password
 
   prepare_browser(browser)
 
   @driver.find_element(:xpath => "//a[contains(text(),'Login')]").click
 
-  @driver.find_element(id: 'user_email').send_keys('')
-  @driver.find_element(id: 'user_password').send_keys(USER_PASSWORD)
+  @driver.find_element(id: 'user_email').send_keys(USER_LOGIN)
+  @driver.find_element(id: 'user_password').send_keys(INCORRECT_PASSWORD)
 
   sleep(CLICK_TIMEOUT)
 
@@ -47,15 +47,15 @@ def tc_04(browser)
 
   @driver.close
 
-  # -----------------------------------tc_04.3----------------------------------
-  # User can not login with blank data
+  # -----------------------------------tc_05.3----------------------------------
+  # User can not login with filled with incorrect data.
 
   prepare_browser(browser)
 
   @driver.find_element(:xpath => "//a[contains(text(),'Login')]").click
 
-  @driver.find_element(id: 'user_email').send_keys('')
-  @driver.find_element(id: 'user_password').send_keys(USER_PASSWORD)
+  @driver.find_element(id: 'user_email').send_keys(INCORRECT_LOGIN)
+  @driver.find_element(id: 'user_password').send_keys(INCORRECT_PASSWORD)
 
   sleep(CLICK_TIMEOUT)
 
