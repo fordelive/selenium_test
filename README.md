@@ -10,9 +10,15 @@ To obtain the application:
 
 or just download it from GitHub
 
-To run it step into the 'watir_test' directory issue the command:
+To store credentials create file .env in the test_suites directory:
 
-`$ ruby test_suites/main.rb`
+LOGIN="user@mail.net"
+
+PASSWORD="userpassword"
+
+To run it step into the 'selenium_test/test_suites' directory issue the command:
+
+`$ ruby main.rb`
 
 To abort execution press `Ctrl+C`
 
@@ -23,8 +29,7 @@ The results of the tests execution can be found in `results.txt` which is create
 
 ```
 Ruby 2.6.0
-watir 6.16.5
-webdrivers 3.7.2
+selenium-webdriver 3.141.0
 ```
 
 ### Installing

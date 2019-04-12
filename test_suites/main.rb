@@ -37,14 +37,14 @@ def write_result(tc_name, browser, result)
 end
 
 
-BROWSER_LIST = [:chrome]
+BROWSER_LIST = [:chrome,:firefox]
 
 prepare_files
 
 BROWSER_LIST.each do |browser|
-  # tc_01(browser)
-  # tc_02(browser)
-  # tc_03(browser)
+  tc_01(browser)
+  tc_02(browser)
+  tc_03(browser)
   tc_04(browser)
-#   tc_05(browser)
+  tc_05(browser)
 end
